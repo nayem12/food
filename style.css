@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+    --container-width-lg:76%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+
+    --transition:all 400ms ease;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7;
+    
+}
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section{
+    padding: 4rem;
+}
+
+
+h1,h2,h3,h4,h5{
+    line-height:1.2 ;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+/* ------------------Nav Statt------------------- */
+nav{
+    background: #fff;
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    box-shadow: var(--box-shadow);
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+   
+}
+
+.nav_menu{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+.logo{
+    color: var(--black);
+}
+.logo i{
+    color: var(--green);
+}
+.nav_menu a{
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color: var(--light-color);
+}
+
+.nav_menu a:hover,.active{
+    color: #fff;
+    background: var(--green);
+    
+    
+}
+
+.nav_menu a.active{
+    color: #fff;
+    background: var(--green);
+    
+}
+.uil-bars{
+    display: none;
+}
+.icon{
+    display: flex;
+    gap: 3rem;
+    
+}
+
+.icon i{
+    padding: 10px 15px;
+    border-radius: 50%;
+    background: #eee;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+.nav-content .icon i:hover{
+    background: var(--green);
+    color: #fff;
+    transform: rotate(360deg);
+    transition: all .5s ease;
+    
+}
+
+/* ------------------Nav End------------------- */
+
+
+.child{
+    flex-direction: row;
+    display: flex;
+    place-items: center;
+}
+.left h4{
+    color: var(--green);
+    font-size: 1.7rem;
+}
+.left h1{
+    color: var(--black);
+    font-size: 4rem;
+}
+
+.left p{
+    color: var(--light-color);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.btn a{
+    padding: 10px 15px;
+    color: #fff;
+    background: var(--black);
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+.btn a:hover{
+    background: var(--green);
+}
+
+
+
+.mother-div{
+    margin-top: 2rem;
+    margin-bottom: 40px;
+}
+
+/* ------------------header slide End------------------- */
+
+.popular-dish{
+    background: #eee;
+    padding-top: 3rem;
+}
+.sub-heading,.heading{
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.sub-heading{
+    color: var(--green);
+}
+
+.heading{
+    color: var(--black);
+}
+.box-conatiner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.box{
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+
+
+.fa-heart{
+
+    position: absolute;
+    right: -100px;
+    top: 10px;
+    
+    padding: 15px 15px;
+    border-radius: 50%;
+    background:#eee;
+    color: var(--black);
+    transition: all .5s ease;
+}
+.fa-eye{
+    position: absolute;
+    
+    left: -100px;
+    top: 10px;
+    padding: 15px 15px;
+    border-radius: 50%;
+    background:#eee;
+    color: var(--black);
+    transition: all .5s ease;
+}
+.box:hover .fa-eye{
+    left: 20px;
+    
+   
+}
+
+.box:hover .fa-heart{
+    right: 20px;
+    
+   
+}
+
+.fa-star ,.fa-star-half-alt{
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+
+.box img{
+    height:100%;
+    padding: 2rem;
+    width: 100%;
+
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+}
+.price span{
+    font-size: 1.5rem;
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+
+/*====================== Media Quary for tablet==================== */
+@media screen and (max-width:1200px) {
+
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+
+    .icon i{
+        font-size: .9rem;
+    }
+    .nav_menu a{
+        font-size: .9rem;
+    }
+
+    .icon{
+        display: flex;
+        gap: 2rem;
+        
+    }
+    .nav_menu{
+        gap: 1rem;
+    }
+    .mother-div{
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media screen and (max-width:800px){
+
+    .container{
+        width: var(--container-width-sm);
+    } 
+    .nav_menu{
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        height: fit-content;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+ }
+
+ .nav_menu.active{
+    transition: var(--transition);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+ }
+        
+    
+            .nav_menu a{
+                display: block;
+                width: 100vw;
+                background: #eee;
+                font-size: .7rem;
+                border: none;
+                border-radius: 0;
+            }
+            .uil-bars{
+                display: block;
+            }
+            .icon i{
+                font-size: .7rem;
+            }
+            
+    .child{
+        flex-direction: column-reverse;
+   text-align: center;
+}
+}
+
+@media screen and (max-width:385px){
+    .icon i{
+        padding: 5px 7.5px;
+    }
+    .nav-content{
+        padding: 10px 0 10px 0;
+        flex-direction: column;
+    }
+}
